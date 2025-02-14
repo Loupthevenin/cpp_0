@@ -6,7 +6,7 @@
 /*   By: ltheveni <ltheveni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 16:57:47 by ltheveni          #+#    #+#             */
-/*   Updated: 2025/02/08 16:20:52 by ltheveni         ###   ########.fr       */
+/*   Updated: 2025/02/14 11:16:34 by ltheveni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,14 @@ PhoneBook::PhoneBook() {
 void PhoneBook::addcontact(std::string &first_name, std::string &last_name,
                            std::string &nickname, std::string &phone_number,
                            std::string &darkest_secret) {
-  contacts[i].set_contact(first_name, last_name, nickname, phone_number,
-                          darkest_secret);
-  if (i < 7)
+  if (i < 8) {
+    contacts[i].set_contact(first_name, last_name, nickname, phone_number,
+                            darkest_secret);
+  } else {
+    contacts[7].set_contact(first_name, last_name, nickname, phone_number,
+                            darkest_secret);
+  }
+  if (i < 8)
     i++;
   count++;
 }
@@ -60,6 +65,16 @@ void PhoneBook::print_contacts() {
   }
 }
 
-void PhoneBook::print_contact(int index) { contacts[index].print_contact(); }
+int PhoneBook::print_contact(int index) {
+  if (index < 1 || index > i || index > 8) {
+    if (index > 8)
+      std::cout << "Invalid index. Choose between 1 and 8" << std::endl;
+    else
+      std::cout << "Invalid index. Choose between 1 and " << i << std::endl;
+    return 0;
+  }
+  contacts[index - 1].print_contact();
+  return 1;
+}
 
 int PhoneBook::get_count() { return (this->count); }
