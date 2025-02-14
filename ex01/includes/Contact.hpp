@@ -6,12 +6,12 @@
 /*   By: ltheveni <ltheveni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 14:41:26 by ltheveni          #+#    #+#             */
-/*   Updated: 2025/02/08 15:20:22 by ltheveni         ###   ########.fr       */
+/*   Updated: 2025/02/14 10:10:01 by ltheveni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_H
-#define CONTACT_H
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 
 #include <string>
 

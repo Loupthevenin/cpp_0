@@ -6,12 +6,12 @@
 /*   By: ltheveni <ltheveni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 14:39:29 by ltheveni          #+#    #+#             */
-/*   Updated: 2025/02/08 15:12:30 by ltheveni         ###   ########.fr       */
+/*   Updated: 2025/02/14 10:56:38 by ltheveni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-#define PHONEBOOK_H
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 
 #include "Contact.hpp"
 
@@ -27,8 +27,10 @@ public:
                   std::string &nickname, std::string &phone_number,
                   std::string &darkest_secret);
   void print_contacts();
-  void print_contact(int index);
+  int print_contact(int index);
   int get_count();
 };
+
+std::string truncate(std::string str);
 
 #endif

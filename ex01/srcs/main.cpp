@@ -6,11 +6,12 @@
 /*   By: ltheveni <ltheveni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 14:59:30 by ltheveni          #+#    #+#             */
-/*   Updated: 2025/02/08 16:50:05 by ltheveni         ###   ########.fr       */
+/*   Updated: 2025/02/14 10:56:16 by ltheveni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/PhoneBook.hpp"
+#include <cstdlib>
 #include <iostream>
 #include <sstream>
 
@@ -84,14 +85,8 @@ int main(int argc, char **argv) {
           std::cout << "Invalid input. Enter a number." << std::endl;
           continue;
         }
-        if (index < 1 || index > book.get_count())
-          std::cout << "Invalid index. Choose between 1 and "
-                    << book.get_count() << std::endl;
-        else {
-          book.print_contact(index - 1);
+        if (book.print_contact(index) == 1)
           break;
-        }
-        i++;
       }
     } else if (choice == "EXIT") {
       exit(EXIT_SUCCESS);
