@@ -6,7 +6,7 @@
 /*   By: ltheveni <ltheveni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 20:35:17 by ltheveni          #+#    #+#             */
-/*   Updated: 2025/02/14 11:26:38 by ltheveni         ###   ########.fr       */
+/*   Updated: 2025/02/17 08:42:56 by ltheveni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void Account::makeDeposit(int deposit) {
   _nbDeposits++;
   _totalAmount += deposit;
   _totalNbDeposits++;
-  std::cout << "amount:" << _amount << ";nb_deposits:" << _nbDeposits
+  std::cout << ";amount:" << _amount << ";nb_deposits:" << _nbDeposits
             << std::endl;
 }
 
